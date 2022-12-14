@@ -4,7 +4,7 @@ import * as THREE from "three";
 import { resources } from "./resources";
 
 import Controls from "./Controls";
-import World from "./World/world";
+import World from "./World/World";
 import Debug from "./Utils/Debug";
 
 export default class Experience extends kokomi.Base {

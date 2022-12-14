@@ -1,6 +1,6 @@
 import * as kokomi from "kokomi.js";
 
-import Experience from "../Experience";
+import type Experience from "../Experience";
 
 export default class World extends kokomi.Component {
   declare base: Experience;
