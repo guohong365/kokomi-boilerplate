@@ -6,4 +6,4 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <div id="sketch"></div>
 `;
 
-const experience = new Experience("#sketch");
+new Experience("#sketch");
