@@ -9,13 +9,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@types/three": "^0.148.0",
+    "@types/three": "^0.148.1",
     "typescript": "^4.9.4",
     "vite": "^4.0.4"
   },
   "dependencies": {
-    "kokomi.js": "^1.9.58",
+    "kokomi.js": "^1.9.61",
     "lil-gui": "^0.17.0",
-    "three": "^0.148.0"
+    "three": "^0.149.0"
   }
 }
