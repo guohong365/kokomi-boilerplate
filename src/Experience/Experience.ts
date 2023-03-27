@@ -17,10 +17,12 @@ export default class Experience extends kokomi.Base {
 
     (window as any).experience = this;
 
-    kokomi.enableRealisticRender(this.renderer);
+    this.renderer.physicallyCorrectLights = true;
 
-    this.renderer.toneMapping = THREE.CineonToneMapping;
-    this.renderer.toneMappingExposure = 1.75;
+    kokomi.beautifyRender(this.renderer);
+
+    kokomi.enableShadow(this.renderer);
+
     this.renderer.setClearColor("#000000");
 
     this.camera.position.set(6, 4, 8);

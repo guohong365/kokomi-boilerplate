@@ -7,6 +7,13 @@ export default class World extends kokomi.Component {
   constructor(base: Experience) {
     super(base);
 
-    this.base.assetManager.on("ready", () => {});
+    this.base.assetManager.on("ready", () => {
+      const envMap = kokomi.getEnvmapFromHDRTexture(
+        this.base.renderer,
+        this.base.assetManager.items["env"]
+      );
+
+      this.base.scene.environment = envMap;
+    });
   }
 }
