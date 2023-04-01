@@ -17,7 +17,8 @@ export default class Experience extends kokomi.Base {
 
     (window as any).experience = this;
 
-    this.renderer.physicallyCorrectLights = true;
+    // this.renderer.physicallyCorrectLights = true;
+    this.renderer.useLegacyLights = false;
 
     kokomi.beautifyRender(this.renderer);
 
