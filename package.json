@@ -14,8 +14,8 @@
     "lil-gui": "^0.18.1"
   },
   "devDependencies": {
-    "@types/three": "^0.150.0",
-    "typescript": "^5.0.3",
-    "vite": "^4.2.1"
+    "@types/three": "^0.151.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.4"
   }
 }
