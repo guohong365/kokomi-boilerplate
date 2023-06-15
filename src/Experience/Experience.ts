@@ -17,18 +17,7 @@ export default class Experience extends kokomi.Base {
 
     (window as any).experience = this;
 
-    // this.renderer.physicallyCorrectLights = true;
-    this.renderer.useLegacyLights = false;
-
-    kokomi.beautifyRender(this.renderer);
-
-    kokomi.enableShadow(this.renderer);
-
-    this.renderer.setClearColor("#000000");
-
-    this.camera.position.set(6, 4, 8);
-    (this.camera as THREE.PerspectiveCamera).fov = 35;
-    this.camera.updateProjectionMatrix();
+    this.camera.position.set(0, 0, 1);
 
     this.assetManager = new kokomi.AssetManager(this, resources);
 
