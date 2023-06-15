@@ -1,5 +1,4 @@
 import * as kokomi from "kokomi.js";
-import * as THREE from "three";
 
 import { resources } from "./resources";
 
