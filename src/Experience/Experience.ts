@@ -16,7 +16,7 @@ export default class Experience extends kokomi.Base {
 
     (window as any).experience = this;
 
-    this.camera.position.set(0, 0, 1);
+    this.camera.position.set(0, 0, 2);
 
     this.assetManager = new kokomi.AssetManager(this, resources);
 
