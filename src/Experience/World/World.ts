@@ -22,11 +22,17 @@ export default class World extends kokomi.Component {
       // placeholder
       const geometry = new THREE.PlaneGeometry(1, 1, 64, 64);
       const uj = new kokomi.UniformInjector(this.base);
+      const uniforms = {
+        uScale: {
+          value: 1,
+        },
+      };
       const material = new THREE.ShaderMaterial({
         vertexShader: testVertexShader,
         fragmentShader: testFragmentShader,
         uniforms: {
           ...uj.shadertoyUniforms,
+          ...uniforms,
         },
       });
       this.base.update(() => {
@@ -34,6 +40,15 @@ export default class World extends kokomi.Component {
       });
       const mesh = new THREE.Mesh(geometry, material);
       this.base.scene.add(mesh);
+      if (this.base.debug.active) {
+        const folder = this.base.debug.ui?.addFolder("test");
+        folder
+          ?.add(uniforms.uScale, "value")
+          .min(1)
+          .max(2)
+          .step(0.01)
+          .name("scale");
+      }
     });
   }
 }

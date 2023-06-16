@@ -7,12 +7,20 @@ uniform vec2 iMouse;
 
 varying vec2 vUv;
 
+uniform float uScale;
+
 void main(){
     vec2 p=vUv;
     
     vec3 col=vec3(p,0.);
     
-    float noise=cnoise3(vec3(p*10.,iTime));
+    p-=.5;
+    p/=uScale;
+    p+=.5;
+    
+    p=p*10.;
+    
+    float noise=cnoise3(vec3(p,iTime));
     col=vec3(noise);
     col=cosPalette(noise,vec3(.5,.5,.5),vec3(.5,.5,.5),vec3(1.,1.,1.),vec3(0.,.10,.20));
     
