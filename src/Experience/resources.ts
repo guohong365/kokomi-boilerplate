@@ -4,6 +4,6 @@ export const resources: kokomi.ResoureList = [
   {
     name: "envmap",
     type: "hdrTexture",
-    path: "hdrs/venice_sunset_1k.hdr",
+    path: "hdrs/orbita_1k.hdr",
   },
 ];
