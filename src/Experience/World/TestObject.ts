@@ -35,7 +35,7 @@ export default class TestObject extends kokomi.Component {
     this.mesh = mesh;
 
     if (this.base.debug.active) {
-      const folder = this.base.debug.ui?.addFolder("test");
+      const folder = this.base.debug.ui?.addFolder("testObject");
       folder
         ?.add(uniforms.uDistort, "value")
         .min(0)
