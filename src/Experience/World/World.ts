@@ -16,7 +16,8 @@ export default class World extends kokomi.Component {
       );
 
       this.base.scene.background = envMap;
-      this.base.scene.backgroundBlurriness = 0.65;
+      this.base.scene.backgroundBlurriness = 0.5;
+      this.base.scene.backgroundIntensity = 0.1;
 
       const testObject = new TestObject(this.base);
       testObject.addExisting();
