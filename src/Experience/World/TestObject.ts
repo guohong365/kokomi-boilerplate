@@ -47,7 +47,7 @@ export default class TestObject extends kokomi.Component {
   addExisting(): void {
     this.container.add(this.mesh);
   }
-  update(time: number): void {
+  update(): void {
     this.uj.injectShadertoyUniforms(this.material.uniforms);
   }
 }
