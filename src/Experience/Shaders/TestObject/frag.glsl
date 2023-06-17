@@ -14,6 +14,7 @@ void main(){
     vec2 p=vUv;
     
     vec3 col=texture(iChannel0,p).xyz;
+    
     float noise=vNoise;
     col=cosPalette(noise,vec3(.5,.5,.5),vec3(.5,.5,.5),vec3(1.,1.,1.),vec3(0.,.10,.20));
     
