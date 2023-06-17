@@ -2,8 +2,8 @@ import type * as kokomi from "kokomi.js";
 
 export const resources: kokomi.ResoureList = [
   {
-    name: "envmap",
+    name: "uv-map",
     type: "texture",
-    path: "textures/FS002_Night.png",
+    path: "textures/uv-map.png",
   },
 ];

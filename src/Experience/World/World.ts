@@ -10,13 +10,6 @@ export default class World extends kokomi.Component {
     super(base);
 
     this.base.assetManager.on("ready", () => {
-      // const envMap = kokomi.getEnvmapFromHDRTexture(
-      //   this.base.renderer,
-      //   this.base.assetManager.items["envmap"]
-      // );
-
-      // this.base.scene.background = envMap;
-
       const testObject = new TestObject(this.base);
       testObject.addExisting();
     });

@@ -6,13 +6,16 @@ uniform vec2 iMouse;
 
 varying vec2 vUv;
 
+uniform sampler2D iChannel0;
+
 varying float vNoise;
 
 void main(){
     vec2 p=vUv;
     
+    vec3 col=texture(iChannel0,p).xyz;
     float noise=vNoise;
-    vec3 col=cosPalette(noise,vec3(.5,.5,.5),vec3(.5,.5,.5),vec3(1.,1.,1.),vec3(0.,.10,.20));
+    col=cosPalette(noise,vec3(.5,.5,.5),vec3(.5,.5,.5),vec3(1.,1.,1.),vec3(0.,.10,.20));
     
     gl_FragColor=vec4(col,1.);
 }

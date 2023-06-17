@@ -18,6 +18,9 @@ export default class TestObject extends kokomi.Component {
     const uj = new kokomi.UniformInjector(this.base);
     this.uj = uj;
     const uniforms = {
+      iChannel0: {
+        value: this.base.assetManager.items["uv-map"],
+      },
       uDistort: {
         value: 1,
       },
