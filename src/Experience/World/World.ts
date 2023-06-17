@@ -20,10 +20,10 @@ export default class World extends kokomi.Component {
       this.base.scene.environment = envMap;
 
       // placeholder
-      const geometry = new THREE.PlaneGeometry(1, 1, 64, 64);
+      const geometry = new THREE.IcosahedronGeometry(2, 64);
       const uj = new kokomi.UniformInjector(this.base);
       const uniforms = {
-        uScale: {
+        uDistort: {
           value: 1,
         },
       };
@@ -43,11 +43,11 @@ export default class World extends kokomi.Component {
       if (this.base.debug.active) {
         const folder = this.base.debug.ui?.addFolder("test");
         folder
-          ?.add(uniforms.uScale, "value")
-          .min(1)
+          ?.add(uniforms.uDistort, "value")
+          .min(0)
           .max(2)
           .step(0.01)
-          .name("scale");
+          .name("distort");
       }
     });
   }
